@@ -5,8 +5,8 @@ describe 'As a user' do
     it 'should list the 10 closest electric and propane stations within 6 miles sorted by distance' do
       visit '/'
 
-      fill_in ".form-control", with: 80203
-      click_link("Locate")
+      fill_in "q", with: 80203
+      click_button("Locate")
 
       expect(current_path).to eq('/search')
 

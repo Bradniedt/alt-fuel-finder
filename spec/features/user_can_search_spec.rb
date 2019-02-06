@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'As a user' do
   describe 'when I visit the root page and search a zip code' do
     it 'should list the 10 closest electric and propane stations within 6 miles sorted by distance' do
+      VCR.cassette
       visit '/'
 
       fill_in "q", with: 80203

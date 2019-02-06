@@ -1,7 +1,7 @@
 class StationService
   def initialize(location)
-    @url = "/v1/nearest.json?api_key=#{ENV['API_KEY']}&location=#{location}&&fuel_type=ELEC,LPG&radius=6&limit=10"
-    @conn = Faraday.new(url: "https://developer.nrel.gov/api/alt-fuel-stations") do |f|
+    @url = "api/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['API_KEY']}&location=#{location}&&fuel_type=ELEC,LPG&radius=6&limit=10"
+    @conn = Faraday.new(url: "https://developer.nrel.gov/") do |f|
       f.adapter Faraday.default_adapter
     end
   end

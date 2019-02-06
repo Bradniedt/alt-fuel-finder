@@ -7,4 +7,10 @@ class Station
     @distance = data[:distance]
     @access_times = data[:access_days_time]
   end
+
+  def find_all(location)
+    stations = StationService.find_all(location).map do |data|
+      Station.new(data)
+    end
+  end
 end

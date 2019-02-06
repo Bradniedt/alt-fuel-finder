@@ -12,7 +12,7 @@ describe StationService, type: :model do
 
     expect(hashes.count).to eq(10)
     expect(station).to have_key(:station_name)
-    expect(station).to have_key(:address)
+    expect(station).to have_key(:street_address)
     expect(station).to have_key(:city)
     expect(station).to have_key(:state)
     expect(station).to have_key(:zip)

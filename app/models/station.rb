@@ -8,8 +8,8 @@ class Station
     @access_times = data[:access_days_time]
   end
 
-  def find_all(location)
-    stations = StationService.find_all(location).map do |data|
+  def self.find_all(location)
+    stations = StationService.find_stations(location).map do |data|
       Station.new(data)
     end
   end

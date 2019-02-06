@@ -12,5 +12,6 @@ class Station
     stations = StationService.find_stations(location).map do |data|
       Station.new(data)
     end
+    stations.sort_by { |station| station.distance }
   end
 end

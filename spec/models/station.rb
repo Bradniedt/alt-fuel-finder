@@ -2,11 +2,14 @@ require 'rails_helper'
 
 describe Station, type: :model do
   describe 'attributes' do
-    data = { name: "station1",
-             address: "123 street",
-             fuel_types: "ELEC",
+    data = { station_name: "station1",
+             street_address: "123 street",
+             city: "denver",
+             state: "CO",
+             zip: 80201,
+             fuel_type_code: "ELEC",
              distance: 6,
-             access_times: "24hrs" }
+             access__days_time: "24hrs" }
     station = Station.new(data)
 
     expect(station).to be_an_instance_of Station
